@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <section class="main-container container-md">
+        <h1>Buscador del clima</h1>
+        <div class="weather-container">
+            <p>Agrege ciudad y pais</p>
+            <h5>Clima en Buenos Aires</h5>
+            <img src="" alt="">
+            <h2>28°C</h2>
+            <p>Max: 29°C</p>
+            <p>Min: 27°C</p> 
+            <p>Humedad: 40%</p>
+            <p>Vientos: 2 km/h, SUR</p>
+            <p>Presion atmosferica: 1000</p>
+        </div>
+        <form action="" method="GET" class="get-weather">
+            <input type="text" name="city" id="city" placeholder="Escriba ciudad" required>
+            <select name="country" id="country" required>
+                <option disabled selected value="">Seleccione país</option>
+                <option value="AR">Argentina</option>
+                <option value="CO">Colombia</option>
+                <option value="CR">Costa Rica</option>
+                <option value="ES">España</option>
+                <option value="US">Estados Unidos</option>
+                <option value="MX">México</option>
+                <option value="PE">Perú</option>
+            </select>
+            <input type="submit" name="" id="" value="Obtener Clima">
+        </form>
+    </section>
+    <script src="main.js"></script>
+</body>
+</html>
