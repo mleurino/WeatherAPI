@@ -2,6 +2,7 @@ const datosClima = document.querySelector(".weather-container");
 const formulario= document.querySelector(".get-weather");
 const nombreCiudad = document.querySelector("#city");
 const nombrePais = document.querySelector("#country");
+const buscador = document.querySelector(".buscador");
 
 
 
@@ -22,13 +23,14 @@ formulario.addEventListener('submit', (e) => {
 
 function clearHTML(){
     datosClima.innerHTML = '';
+    buscador.innerHTML= "";
 }
 
 
 
 function callAPI(ciudad, pais){
     const apiID= 'd93db55aca6c923e6420caaba7b519a6';
-    const url= `http://api.openweathermap.org/data/2.5/weather?q=${ciudad},${pais}&appid=${apiID}`;
+    const url= `https://api.openweathermap.org/data/2.5/weather?q=${ciudad},${pais}&appid=${apiID}`;
 
     fetch(url)
         .then(datos => {
@@ -101,15 +103,16 @@ function showWeather (data) {
 
 
         const contenido = document.createElement("div");
+        contenido.classList.add("weather-card");
         contenido.innerHTML= `
         <h5>Clima en ${name}</h5>
             <img src="https://openweathermap.org/img/wn/${array.icon}@2x.png" alt=${name}>
-            <h2>${temperature}°</h2>
-            <p>Max: ${tempMax}°</p>
-            <p>Min: ${tempMin}°</p> 
+            <h2>${temperature}°C</h2>
+            <p>Max: ${tempMax}°C</p>
+            <p>Min: ${tempMin}°C</p> 
             <p>Humedad: ${humidity}%</p>
             <p>Vientos: ${speedConverted} km/h, ${windDirection}</p>
-            <p>Presion atmosferica: ${pressure}</p>
+            <p>Presion atmosferica: ${pressure}hPa</p>
         `;
         datosClima.appendChild(contenido);
         

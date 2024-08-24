@@ -1,11 +1,23 @@
+body{
+    background: linear-gradient(135deg);
+    background-color: #808080;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: auto; 
+}
+
 .main-container {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     text-align: center;
     padding: 20px 20px 50px;
-    margin: 10% auto 0;
+    margin: 10px auto 0;
     background-color: #546785;
     border-radius: 10px;
-    max-width: 400px;
+    max-width: 600px;
 }
 form input[type="text"], form input[type="submit"], form select{
     display: block;
@@ -13,4 +25,76 @@ form input[type="text"], form input[type="submit"], form select{
     width: 60%;
     margin-left: auto;
     margin-right: auto;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+form input[type="text"], form select{
+    background-color: hsla(0, 0%, 96%, 0.678);
+    border: 1px solid #000000;
+}
+form input[type="submit"]{
+    background-color: hsla(138, 100%, 50%, 0.534);
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+.weather-card {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-gap: 5px; 
+    align-items: center; 
+    margin-bottom: 50px;
+    box-sizing: border-box;
+}
+.weather-card img {
+    width: 120px;
+    height: 120px;
+    grid-column: span 2; 
+    margin: 0 auto;
+}
+
+.weather-card h5 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    grid-column: span 2; 
+    
+}
+
+.weather-card h2 {
+    font-size: 2.5rem;
+    margin: 10px 0;
+    grid-column: span 2; 
+    
+}
+
+.weather-card p {
+    font-size: 1rem;
+    margin: 5px 0;
+    margin-left: 10px;
+    text-align: start;
+}
+.weather-card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
