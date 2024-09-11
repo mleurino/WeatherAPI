@@ -1,24 +1,61 @@
 body{
     background: linear-gradient(135deg);
     background-color: #808080;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Lato', sans-serif;
     color: #333;
+}
+body.clear-sky {
+    background: linear-gradient(to right, #87ceeb, #f0f8ff);
+}
+body.cloudy {
+    background: linear-gradient(to right, #b0c4de, #dcdcdc);
+}
+body.rainy {
+    background: linear-gradient(to right, #4f6d7a, #c0c0c0);
+    
+}
+
+body.thunderstorm {
+    background: linear-gradient(to right, #2f4f4f, #708090);
+}
+
+body.snow {
+    background: linear-gradient(to right, #ffffff, #add8e6);
+    
+    
+}
+
+body.fog {
+    background: linear-gradient(to right, #d3d3d3, #f5f5f5);
+    
+}
+
+body.windy {
+    background: linear-gradient(to right, #9acd32, #87cefa);
+    
 }
 html, body {
     height: 100%;
     margin: 0;
     overflow: auto; 
 }
-
+.weather-ico{
+    font-size: 200px;
+}
 .main-container {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     text-align: center;
     padding: 20px 20px 50px;
-    margin: 10px auto 0;
-    background-color: #546785;
+    margin: 10px auto 40px;
+    background-color: none;
     border-radius: 10px;
     max-width: 600px;
+    font-family: 'Lato', sans-serif;
 }
+.main-container:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+   
+}
+
 form input[type="text"], form input[type="submit"], form select{
     display: block;
     text-align: center;
@@ -47,6 +84,7 @@ form input[type="submit"]:hover {
     background-color: #0056b3;
 }
 .weather-card {
+    font-size: medium;
     text-align: center;
     display: grid;
     grid-template-columns: 1fr 1fr; 
@@ -56,31 +94,41 @@ form input[type="submit"]:hover {
     box-sizing: border-box;
 }
 .weather-card img {
-    width: 120px;
-    height: 120px;
+    width: 200px;
+    height: 200px;
     grid-column: span 2; 
     margin: 0 auto;
 }
 
 .weather-card h5 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 20px;
     grid-column: span 2; 
     
 }
 
-.weather-card h2 {
-    font-size: 2.5rem;
+.weather-card div  {
+    
+    font-size: 3rem;
+    text-align: center;
     margin: 10px 0;
     grid-column: span 2; 
     
 }
 
-.weather-card p {
-    font-size: 1rem;
+
+.weather-card p  {
+    border: 2px solid black;
+    font-size: 1.5rem;
     margin: 5px 0;
     margin-left: 10px;
-    text-align: start;
+    text-align: center;
+    align-content: center;
+    height: 6rem;
+}
+.weather-card span{
+    font-size: 1rem;
 }
 .weather-card {
     opacity: 0;
@@ -97,4 +145,29 @@ form input[type="submit"]:hover {
         opacity: 1;
         transform: translateY(0);
     }
+}
+.dropdown{
+    margin-top: 2rem;
+}
+
+.borrar-historial {
+    text-align: center;
+    border-radius: 8px;
+    background-color: rgb(240, 78, 78);
+    margin-left: auto;
+    margin-right: auto;
+    list-style-type: none;
+    margin: 10px;
+    height: 45px;
+    width: 105px;
+}
+
+.dropdown-menu li {
+    width: 100%;
+    align-items: center;
+    background-color: #f0f4f8;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
