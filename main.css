@@ -1,5 +1,5 @@
 body{
-    background: linear-gradient(135deg);
+    background: linear-gradient(to right,rgb(71, 71, 71) ,#808080);
     background-color: #808080;
     font-family: 'Lato', sans-serif;
     color: #333;
@@ -39,13 +39,31 @@ html, body {
     margin: 0;
     overflow: auto; 
 }
+nav.navbar {
+    background: linear-gradient(to right, #000000, #616161);
+}
+.navbar-brand, .nav-link-text{
+    color: #87cefa;
+}
+.navbar-brand:hover, .nav-link-text:hover{
+    color: #0056b3;
+}
+.nav-link-text:focus{
+    background-color: #39b840;
+}
+.nav-link-text {
+    margin-left: 25px;
+}
 .weather-ico{
     font-size: 200px;
+}
+.weather-container{
+    margin-top: 70px;
 }
 .main-container {
     text-align: center;
     padding: 20px 20px 50px;
-    margin: 10px auto 40px;
+    margin: 75px auto 40px;
     background-color: none;
     border-radius: 10px;
     max-width: 600px;
@@ -109,9 +127,10 @@ form input[type="submit"]:hover {
 }
 
 .weather-card div  {
-    
+   
     font-size: 3rem;
     text-align: center;
+    
     margin: 10px 0;
     grid-column: span 2; 
     
@@ -120,6 +139,7 @@ form input[type="submit"]:hover {
 
 .weather-card p  {
     border: 2px solid black;
+    padding: 10px;
     font-size: 1.5rem;
     margin: 5px 0;
     margin-left: 10px;
@@ -127,9 +147,7 @@ form input[type="submit"]:hover {
     align-content: center;
     height: 6rem;
 }
-.weather-card span{
-    font-size: 1rem;
-}
+
 .weather-card {
     opacity: 0;
     transform: translateY(20px);
@@ -170,4 +188,36 @@ form input[type="submit"]:hover {
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 650px){
+     .weather-card p{
+        height: 200px;
+     }
+     #carouselExampleCaptions{
+        width: 100px;
+     }
+}
+#carouselExampleCaptions{
+   background: linear-gradient(to right,rgb(71, 71, 71) ,#808080);
+  
+   width: 80%;
+   height: 500px;
+   margin: 100px auto 30px auto;
+  
+}
+.carousel-caption{
+    margin: 0%;
+    padding: 0;
+  top: 5px;
+  left: 15px;
+  
+  width: 90%;
+  color:black;
+  height: fit-content;
+  border-radius: 10px;
+}
+.carousel-item img{
+    height: 500px;
+    align-content: center;
+    
 }
