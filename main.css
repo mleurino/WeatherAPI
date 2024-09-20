@@ -105,7 +105,8 @@ form input[type="submit"]:hover {
     text-align: center;
 }
 .weather-info {
-    background: linear-gradient(to right, #444444, #616161);
+    
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4));
     box-shadow: 10px 8px 10px rgba(0, 0, 0, 0.1);
     min-width: 280px;
     padding: 40px;
@@ -222,7 +223,7 @@ form input[type="submit"]:hover {
 }
 
 #carouselExampleCaptions{
-    background: linear-gradient(to right, #444444, #616161);
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4));
     box-shadow: 10px 8px 10px rgba(0, 0, 0, 0.1);
    overflow: hidden;
    width: 70%;
